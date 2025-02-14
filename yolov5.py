@@ -35,7 +35,7 @@ while True:
     # writer.write(frame)
     
     # gray = cv2.cvtColor(frame)
-    result = model(frame, size=640)
+    result = model(frame, size=(width, height))
     xmin = int(result.pandas().xyxy[0].iloc[0, 0])
     ymin = int(result.pandas().xyxy[0].iloc[0, 2])
     xmax = int(result.pandas().xyxy[0].iloc[0, 3])
